@@ -11,6 +11,13 @@ class MessagesController < ApplicationController
       render 'new'
     end
   end
+
+  def index
+    @messages = Message.all
+    flash[:notice] = "Display all messages !!!"
+    redirect_to messages_path
+  end
+  
     
   private
     
