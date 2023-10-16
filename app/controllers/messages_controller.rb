@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def new
     @message = Message.new
-  end    
+  end
 
   def create
     @message = Message.new(message_params)
@@ -13,14 +13,13 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @message = Message.order("RANDOM()").first
+    @message = Message.order('RANDOM()').first
     render json: { message: @message.text }
     puts
   end
-  
-    
+
   private
-    
+
   def message_params
     params.require(:message).permit(:text)
   end
