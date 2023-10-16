@@ -13,9 +13,9 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @messages = Message.all
-    flash[:notice] = "Display all messages !!!"
-    redirect_to messages_path
+    @message = Message.order("RANDOM()").first
+    render json: { message: @message.text }
+    puts
   end
   
     
