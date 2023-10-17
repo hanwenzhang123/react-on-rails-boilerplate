@@ -27,7 +27,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [MY FINANCES APP] <a name="about-project"></a>
+# 📖 ["Hello world" project as one app with Webpack] <a name="about-project"></a>
 By now I've used many different gems with Rails and this exercise connect previous knowledge with new knowledge as I get a chance to use Webpack with jsbundling-rails gem.
 
 ## 🛠 Built With <a name="built-with"></a>
