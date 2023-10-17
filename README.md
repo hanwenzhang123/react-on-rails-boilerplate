@@ -103,6 +103,7 @@ Go to your /hello-rails-react folder:
 ```sh
   cd hello-rails-react
   bundle install
+  bin/rails db:seed
 ```
 
 ### Usage
