@@ -9,24 +9,22 @@ export const fetchRandomGreeting = createAsyncThunk('data/fetchRandomGreeting', 
       }
   
       const data = await response.json();
-      // Puedes realizar cualquier transformación necesaria en los datos aquí
-      return { text: data.message, isSelected: false };
+      return data.message;
     } catch (error) {
       throw new Error('Error fetching data from the API');
     }
   });
-  
-const greetingsSlice = createSlice({
-  name: 'greetings',
-  initialState: {
-    greeting: '',
-  },
-  reducers: {
-    setGreetings: (state, action) => {
-      state.greeting = action.payload;
+
+  const greetingsSlice = createSlice({
+    name: 'greetings',
+    initialState: '', 
+    reducers: {},
+    extraReducers: (builder) => {
+      builder.addCase(fetchRandomGreeting.fulfilled, (state, action) => {
+        return action.payload;
+      });
     },
-  },
-});
+  });
 
 export const { setGreetings } = greetingsSlice.actions;
 export default greetingsSlice.reducer;
