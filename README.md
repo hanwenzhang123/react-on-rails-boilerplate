@@ -165,4 +165,4 @@ We would like to thank Bee in Student Success who is always avalaible to solve i
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- 
+ # react-on-rails-boilerplate
